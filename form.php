@@ -9,6 +9,13 @@
  </head>
 
  <body>
+    <form action="password.php">
+        <label for="passwordSet">password lenght:</label>
+
+        <input type="number" id="passwordSet" name="passwordSet" min="8" max="20" />
+        <button class="btn btn-primary" type="submit">Create a password</button>
+    </form>
+    
 
  </body>
 

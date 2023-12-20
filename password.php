@@ -1,3 +1,6 @@
+<?php
+ $passwordSet = $_GET["passwordSet"];
+ ?>
 <!DOCTYPE html>
  <html lang="en">
 
@@ -9,6 +12,8 @@
  </head>
 
  <body>
+ <?php echo $passwordSet; ?>
+ <a href="form.php">new password</a>
 
  </body>
 
