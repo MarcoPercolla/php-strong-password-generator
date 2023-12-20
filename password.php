@@ -1,5 +1,22 @@
 <?php
- $passwordSet = $_GET["passwordSet"];
+ 
+
+ function createPassword(){
+    $passwordSet = $_GET["passwordSet"];
+    $password = array();
+    $pool = '!\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
+    $poolLast = strlen($pool) - 1;
+    for ($i=0; $i < $passwordSet ; $i++) { 
+        $randomInt = rand(1,$poolLast);
+        $password[]=$pool[$randomInt];
+
+        
+    }
+    return implode($password) ;
+
+    
+
+ }
  ?>
 <!DOCTYPE html>
  <html lang="en">
@@ -12,7 +29,7 @@
  </head>
 
  <body>
- <?php echo $passwordSet; ?>
+ <?php echo createPassword(); ?>
  <a href="form.php">new password</a>
 
  </body>
